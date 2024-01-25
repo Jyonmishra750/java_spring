@@ -4,47 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css"> 
+    <!-- 
+      without '/' -> Relative path
+      '/' -> Absolute path
+     -->
     <title>Home</title>
-    <style>
-        body{
-            background-color: lightgoldenrodyellow;
-            margin-top: 0;
-            
-        }
-        .container{
-            width: max-content;
-            height: 50rem;
-        }
-        .heading{
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            text-decoration: underline;
-            text-align: center;
-        }
-        .table{
-            margin-top: 5%;
-            background-color: white;
-            border-collapse: collapse;
-        }
-        .table th{
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        .table tr{
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        .card{
-            
-            background-color: lightblue;
-        }
-        .dateTime{
-            text-align:right;
-            font-style: italic;
-            font-weight: 500;
-            color: darkred;
-            font-size:medium;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        
-    </style>
 </head>
 <body>
     <div class="container">
@@ -106,15 +71,15 @@
             <caption>List of Courses</caption>
             <thead class="thead-dark">
               <tr>
-                <th scope="col">Sl.no</th>
-                <th scope="col">Subject</th>
-                <th scope="col">Duration</th>
-                <th scope="col">Fees</th>
+                <th scope="col" data-th-text="|Sl.no|"></th>
+                <th scope="col" data-th-text="|Subject|"></th>
+                <th scope="col" data-th-text="|Duration|"></th>
+                <th scope="col" data-th-text="|Fees|"></th>
               </tr>
             </thead>
-            <tbody data-th-each="course:${courses}">
+            <tbody data-th-each="course, loop:${courses}">
               <tr>
-                <th scope="row" data-th-text="${course.slno}"></th>
+                <th scope="row" data-th-text="${loop.index+1}"></th>
                 <td data-th-text="${course.coursename}"></td>
                 <td data-th-text="${course.duration}"></td>
                 <td data-th-text="${course.fee}"></td>

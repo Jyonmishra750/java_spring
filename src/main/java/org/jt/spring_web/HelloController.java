@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Controller
 public class HelloController {
-    @GetMapping("/home")
+    @GetMapping({"/home", "/"})
     public String SpringWeb(Model model) {
 
         LocalDate myDateObj = LocalDate.now();
