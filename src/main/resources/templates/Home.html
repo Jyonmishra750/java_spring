@@ -23,17 +23,17 @@
         </div>
 
         <div class="row">
-            <div class="col" >
+            <div class="col">
                 <div class="card" style="width: 18rem;" >
                     <div class="card-body">
                       <h4 class="card-title"><p><span data-th-text="${student1.name}"></span></p></h4>
-                      <p class="card-text">(Java Developer)</p>
+                      <p class="card-text" data-th-text="|(Java Developer)|"></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Qualification: </b> <span data-th-text="${student1.qualification}"></span></li>
-                      <li class="list-group-item"><b>Address: </b><span data-th-text="${student1.location}"></span></li>
-                      <li class="list-group-item"><b>Email: </b><span data-th-text="${student1.email}"></span></li>
-                      <li class="list-group-item"><b>Mobile No: </b><span data-th-text="${student1.contact}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Qualification: |"></b> <span data-th-text="${student1.qualification}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Address: |"></b><span data-th-text="${student1.location}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Email: |"></b><span data-th-text="${student1.email}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Mobile No: |"></b><span data-th-text="${student1.contact}"></span></li>
                     </ul>
                 </div>
             </div>
@@ -41,13 +41,13 @@
                 <div class="card" style="width: 18rem;" >
                     <div class="card-body">
                       <h4 class="card-title"><p><span data-th-text="${student2.name}"></span></p></h4>
-                      <p class="card-text">(Python Developer)</p>
+                      <p class="card-text" data-th-text="|(Python Developer)|"></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Qualification: </b> <span data-th-text="${student2.qualification}"></span></li>
-                      <li class="list-group-item"><b>Address: </b><span data-th-text="${student2.location}"></span></li>
-                      <li class="list-group-item"><b>Email: </b><span data-th-text="${student2.email}"></span></li>
-                      <li class="list-group-item"><b>Mobile No: </b><span data-th-text="${student2.contact}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Qualification: |"> </b> <span data-th-text="${student2.qualification}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Address: |"> </b><span data-th-text="${student2.location}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Email: |"></b><span data-th-text="${student2.email}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Mobile No: |"> </b><span data-th-text="${student2.contact}"></span></li>
                     </ul>
                 </div>
             </div>
@@ -55,20 +55,20 @@
                 <div class="card" style="width: 18rem;" >
                     <div class="card-body">
                       <h4 class="card-title"><p><span data-th-text="${student3.name}"></span></p></h4>
-                      <p class="card-text">(Web Developer)</p>
+                      <p class="card-text" data-th-text="|(Web Developer)|"></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Qualification: </b> <span data-th-text="${student3.qualification}"></span></li>
-                      <li class="list-group-item"><b>Address: </b><span data-th-text="${student3.location}"></span></li>
-                      <li class="list-group-item"><b>Email: </b><span data-th-text="${student3.email}"></span></li>
-                      <li class="list-group-item"><b>Mobile No: </b><span data-th-text="${student3.contact}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Qualification: |"></b> <span data-th-text="${student3.qualification}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Address: |"></b><span data-th-text="${student3.location}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Email: |"></b><span data-th-text="${student3.email}"></span></li>
+                      <li class="list-group-item"><b data-th-text="|Mobile No: |"></b><span data-th-text="${student3.contact}"></span></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <table class="table table-bordered table-hover">
-            <caption>List of Courses</caption>
+            <caption data-th-text="|List of Courses|"></caption>
             <thead class="thead-dark">
               <tr>
                 <th scope="col" data-th-text="|Sl.no|"></th>
@@ -77,8 +77,8 @@
                 <th scope="col" data-th-text="|Fees|"></th>
               </tr>
             </thead>
-            <tbody data-th-each="course, loop:${courses}">
-              <tr>
+            <tbody>
+              <tr data-th-each="course, loop:${courses}">
                 <th scope="row" data-th-text="${loop.index+1}"></th>
                 <td data-th-text="${course.coursename}"></td>
                 <td data-th-text="${course.duration}"></td>
