@@ -24,9 +24,9 @@ public class HelloController {
 
         String heading = "THIS IS FIRST SPRING-BOOT APPLICATION";
 
-        var student1 = new Person( "Jyoti Narayan Mishra", "MCA", "Cuttack", "jyotinarayan@gmail.com","+91 7606097028");
-        var student2 = new Person( "Pradosh Pattanaik", "BSc. CS", "Cuttack", "pradoshkumar@gmail.com","+91 8249745690");
-        var student3 = new Person( "Saswat Swarup", "BSc. CS", "Bhubaneswar", "saswatswarup@gmail.com","+91 7978624851");
+        var person1 = new Person( "Jyoti Narayan Mishra", "MCA", "Cuttack", "jyotinarayan@gmail.com","+91 7606097028");
+        var person2 = new Person( "Pradosh Pattanaik", "BSc. CS", "Cuttack", "pradoshkumar@gmail.com","+91 8249745690");
+        var person3 = new Person( "Saswat Swarup", "BSc. CS", "Bhubaneswar", "saswatswarup@gmail.com","+91 7978624851");
 
         var course1 = new Course(1, "Web Programming", "6 Months", "5000.00");
         var course2 = new Course(2, "Python", "6 Months", "10000.00");
@@ -34,7 +34,7 @@ public class HelloController {
 
         var courses = List.of(course1, course2, course3);
 
-        model.addAllAttributes(Map.of("courses", courses, "student1",student1, "student2", student2, "student3", student3, "heading",heading, "date",date, "time",time));
+        model.addAllAttributes(Map.of("courses", courses, "person1",person1, "person2", person2, "person3", person3, "heading",heading, "date",date, "time",time));
         
 
         return "Home";
